@@ -103,3 +103,26 @@ function loop(people) {
 }
 
 loop(people);
+
+
+// loop through the array to find the largest element
+var nums = [55, 2, 4, 1, 77, 32, 13, 99999];
+var numb = [];
+
+// change the values and length of the array to prove you have a working solution
+
+function largestNum(arr) {
+
+  sortedArr = arr.sort();
+  let largest;
+
+  if (sortedArr.length > 0) {
+    largest = sortedArr.pop();
+    console.log(`The largest number in this given array is ${largest}.`);
+  } else {
+    console.log('There is nothing in here.')
+  }
+}
+
+largestNum(nums);
+largestNum(numb);
