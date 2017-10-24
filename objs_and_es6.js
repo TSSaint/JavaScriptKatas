@@ -33,3 +33,73 @@ var movie = {
 // rename(names);
 movie.rating = 8.5;
 console.log(`${movie.title} is directed by ${movie.director} and has ${movie.rating} stars`);
+
+
+// obj interpolation practice
+var people = [
+  {
+    name: 'Stacey',
+    age: 12,
+    hobbies: ['Knitting', 'Reading', 'Laughing', 'Playing']
+  },
+  {
+    name: 'Macey',
+    age: 105,
+    hobbies: ['Swimming', 'Kite flying', 'Running']
+  },
+  {
+    name: 'Lacey',
+    age: 32,
+    hobbies: ['Puppies', 'Yoga']
+  },
+  {
+    name: 'Tracey',
+    age: 3,
+    hobbies: []
+  }
+];
+
+// loop over the people and log out everyone's name
+// the logged output should be:
+//   Stacey
+//   Macey
+//   Lacey
+//   Tracey
+
+function loopName(people) {
+  for (i=0; i<people.length; i++) {
+    console.log(people[i].name);
+  }
+}
+
+loopName(people);
+
+// loop over the people and print out the hobbies of each person
+// the logged output should be:
+//   ['Knitting', 'Reading', 'Laughing', 'Playing']
+//   ['Swimming', 'Kite flying', 'Running']
+//   ['Puppies', 'Yoga']
+//   []
+
+function loopHobbies(people) {
+  for (i=0; i<people.length; i++) {
+    console.log(people[i].hobbies);
+  }
+}
+
+loopHobbies(people);
+
+// loop over the people and print out the name, age and number of hobbies of each person
+// the logged output should be:
+//   Stacey is 12 years old and has 4 hobbies.
+//   Macey is 105 years old and has 3 hobbies.
+//   Lacey is 32 years old and has 2 hobbies.
+//   Tracey is 3 years old and has 0 hobbies.
+
+function loop(people) {
+  for (i=0; i<people.length; i++) {
+    console.log(`${people[i].name} is ${people[i].age} years old and has ${people[i].hobbies.length} hobbies.`);
+  }
+}
+
+loop(people);
